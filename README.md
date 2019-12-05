@@ -4,7 +4,7 @@
   - Nome Completo (obrigatório)
   - Email (obrigatório)
   - CPF (obrigatório e precisa de mascara: 000.000.000-00)
-  - Data de nascimento (obrigatório e precisa de mascara: 00/00/0000
+  - Data de nascimento (obrigatório e precisa de mascara: 00/00/0000)
   - Botão de Salvar
   
 #### 2. Criar uma tela que tenha uma tabela buscando na base de dados todos os dados de todos os clientes cadastrados.
