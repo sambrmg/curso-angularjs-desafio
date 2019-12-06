@@ -2,17 +2,17 @@ angular.module('app', [
     'ngRoute',
     'frutasServiceApp'
 ])
-.config(['$routeProvider', '$locationProvider', definirRotas]);
+    .config(['$routeProvider', '$locationProvider', definirRotas]);
 
 function definirRotas($routeProvider, $locationProvider) {
 
-$locationProvider.hashPrefix('');
+    $locationProvider.hashPrefix('');
 
-$routeProvider.
-when('/frutas', {
-    controller: 'FrutasController',
-    templateUrl: 'frutas/frutas.html'
-}).
-otherwise({ redirectTo: '/frutas' });
+    $routeProvider.
+        when('/frutas', {
+            controller: 'FrutasController',
+            templateUrl: 'frutas/frutas.html'
+        }).
+        otherwise({ redirectTo: '/frutas' });
 
 }
