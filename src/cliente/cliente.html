@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col">
+        <div class="alert alert-success" role="alert" ng-show="msg.length">
+            <ul>
+                <li ng-repeat="text in msg">{{text}}</li>
+            </ul>
+        </div>
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome Completo</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Data de Nascimento</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="cliente in clientes">
+                    <td scope="row">{{cliente.id}}</td>
+                    <td>{{cliente.nome}}</td>
+                    <td>{{cliente.email}}</td>
+                    <td>{{cliente.cpf}}</td>
+                    <td>{{cliente.dataNascimento}}</td>
+                    <td>
+                        <button ng-click="excluir(cliente.id)" class="btn btn-danger btn-sm" type="button">
+                            Excluir
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <form class="col">
+        <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" class="form-control" ng-model="nome" id="nome" aria-describedby="nomeHelp"
+                placeholder="Nome Completo">
+        </div>
+        <div class="form-group">
+            <label for="cpf">CPF</label>
+            <input type="text" ng-change="formatarCPF()" class="form-control" ng-model="cpf" id="cpf" aria-describedby="cpfHelp"
+                placeholder="CPF" maxlength="14">
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="text" class="form-control" ng-model="email" id="email" aria-describedby="emailHelp"
+                placeholder="E-mail">
+        </div>
+        <div class="form-group">
+            <label for="dataNascimento">Data Nascimento</label>
+            <input type="text" class="form-control" ng-model="dataNascimento" id="dataNascimento"
+                aria-describedby="dataNascimentoHelp" placeholder="Data Nascimento">
+        </div>
+        <button type="button" class="btn btn-primary" ng-click="incluir()">Salvar</button>
+    </form>
+</div>

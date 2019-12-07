@@ -1,6 +1,8 @@
 angular.module('app', [
     'ngRoute',
-    'frutasServiceApp'
+    'frutasServiceApp',
+    'clienteServiceApp',
+    'filtrosApp'
 ])
     .config(['$routeProvider', '$locationProvider', definirRotas]);
 
@@ -12,6 +14,10 @@ function definirRotas($routeProvider, $locationProvider) {
         when('/frutas', {
             controller: 'FrutasController',
             templateUrl: 'frutas/frutas.html'
+        }).
+        when('/cliente', {
+            controller: 'ClienteController',
+            templateUrl: 'cliente/cliente.html'
         }).
         otherwise({ redirectTo: '/frutas' });
 
